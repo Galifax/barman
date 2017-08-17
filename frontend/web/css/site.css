@@ -212,6 +212,14 @@ a.desc:after {
         padding: 3px 15px !important;
     }
 }
+
+.navbar-nav > li > .dropdown-menu {
+    margin-top: 0;
+    margin-right: 22%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
 .form-group{
     margin-top: 7px;
     margin-bottom: 0px;

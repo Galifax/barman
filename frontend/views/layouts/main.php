@@ -30,7 +30,7 @@ AppAsset::register($this);
 <?php $category = Category::find()->where(['parent_id' => 0])->with('category')->all()?>
 <div class="wrap">
 
-    <nav class="navbar navbar-color">
+    <nav class="navbar navbar-color navbar-fixed-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">

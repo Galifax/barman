@@ -26,38 +26,149 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
 <div class="wrap">
-    <?php
-    NavBar::begin([
-        'brandLabel' => 'My Company',
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
-        ],
-    ]);
-    $menuItems = [
-        ['label' => 'Главная', 'url' => ['/site/index']],
-        ['label' => 'О нас', 'url' => ['/site/about']],
-        ['label' => 'Контакти', 'url' => ['/site/contact']],
-    ];
-    if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Регистрация', 'url' => ['/site/signup']];
-        $menuItems[] = ['label' => 'Вход', 'url' => ['/site/login']];
-    } else {
-        $menuItems[] = '<li>'
-            . Html::beginForm(['/site/logout'], 'post')
-            . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
-                ['class' => 'btn btn-link logout']
-            )
-            . Html::endForm()
-            . '</li>';
-    }
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => $menuItems,
-    ]);
-    NavBar::end();
-    ?>
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Brand Logo !!!</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown dropdown-large">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Создать задание<b class="caret"></b></a>
+
+                        <ul class="dropdown-menu dropdown-menu-large row">
+                            <li class="col-sm-3">
+                                <ul>
+                                    <li class="dropdown-header">Заголовок 1</li>
+                                    <li><a href="#">Услуга 1</a></li>
+                                    <li><a href="#">Услуга 2</a></li>
+                                    <li><a href="#">Услуга 3</a></li>
+                                    <li class="divider"></li>
+                                    <li class="dropdown-header">Заголовок 2</li>
+                                    <li><a href="#">Услуга 1</a></li>
+                                    <li><a href="#">Услуга 2</a></li>
+                                    <li><a href="#">Услуга 3</a></li>
+                                    <li><a href="#">Услуга 4</a></li>
+                                </ul>
+                            </li>
+                            <li class="col-sm-3">
+                                <ul>
+                                    <li class="dropdown-header">Заголовок 3</li>
+                                    <li><a href="#">Услуга 1</a></li>
+                                    <li><a href="#">Услуга 2</a></li>
+                                    <li><a href="#">Услуга 3</a></li>
+                                    <li><a href="#">Услуга 4</a></li>
+                                    <li><a href="#">Услуга 5</a></li>
+                                    <li><a href="#">Услуга 6</a></li>
+                                    <li><a href="#">Услуга 7</a></li>
+                                </ul>
+                            </li>
+                            <li class="col-sm-3">
+                                <ul>
+                                    <li class="dropdown-header">Заголовок 4</li>
+                                    <li><a href="#">Услуга 1</a></li>
+                                    <li><a href="#">Услуга 2</a></li>
+                                    <li><a href="#">Услуга 3</a></li>
+                                    <li class="divider"></li>
+                                    <li class="dropdown-header">Заголовок 5</li>
+                                    <li><a href="#">Услуга 1</a></li>
+                                    <li><a href="#">Услуга 2</a></li>
+                                    <li><a href="#">Услуга 3</a></li>
+                                    <li><a href="#">Услуга 4</a></li>
+                                </ul>
+                            </li>
+                            <li class="col-sm-3">
+                                <ul>
+                                    <li class="dropdown-header">Заголовок 6</li>
+                                    <li><a href="#">Услуга 1</a></li>
+                                    <li><a href="#">Услуга 2</a></li>
+                                    <li><a href="#">Услуга 3</a></li>
+                                    <li class="divider"></li>
+                                    <li class="dropdown-header">Заголовок 1</li>
+                                    <li><a href="#">Услуга 1</a></li>
+                                    <li><a href="#">Услуга 2</a></li>
+                                    <li><a href="#">Услуга 3</a></li>
+                                    <li><a href="#">Услуга 4</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </li>
+                </ul>
+                <form action="">
+                    <div class="row">
+                        <div id="custom-search-input">
+                            <div class="input-group">
+                                <input type="text" class="search-query form-control" placeholder="Поиск" value="" name="s"/>
+                                <span class="input-group-btn">
+                                   <button class="btn btn-danger" type="submit">
+                                      <span class=" glyphicon glyphicon-search"></span>
+                                   </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Стать исполнителем</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-user"></span> 
+                            <strong>Galifax</strong>
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <div class="navbar-login">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <p class="text-center">
+                                                <span class="glyphicon glyphicon-user icon-size"></span>
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <p class="text-left"><strong>Galifax</strong></p>
+                                            <p class="text-left small">Место для текста?!</p>
+                                            <p class="text-left">
+                                                <a href="#" class="btn btn-primary btn-block btn-sm">Мой Профиль</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="navbar-login navbar-login-session">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <p>
+                                                <a href="#" class="btn btn-danger btn-block">Выйти</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+
 
     <div class="container">
         <a href="" class="btn btn-default">Бармен</a>

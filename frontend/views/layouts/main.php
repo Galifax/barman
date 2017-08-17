@@ -217,16 +217,20 @@ AppAsset::register($this);
 
 
     <div class="container">
-
+<?=$content?>
 
     </div>
 </div>
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
-
-        <p class="pull-right"><?= Yii::powered() ?></p>
+        <div class="footer-img-block bg-img1">
+            <div class="img-block-text">
+                <h2>Помочь с выбором подходящего специалиста?</h2>
+                <p>Разместите заявку и в течение 10 минут мы найдем несколько компетентных специалистов для вашей задачи.</p>
+                <a href="/">Оформить заявку</a>
+            </div>
+        </div>
     </div>
 </footer>
 

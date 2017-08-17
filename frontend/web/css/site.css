@@ -132,6 +132,10 @@ a.desc:after {
 /***************************/
 /**********Navbar***********/
 /***************************/
+.navbar-color{
+    background-color: #1A8F5D;
+}
+
 .navbar-header button{
     color: whitesmoke;
 }

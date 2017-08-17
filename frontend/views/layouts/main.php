@@ -30,7 +30,7 @@ AppAsset::register($this);
 <?php $category = Category::find()->where(['parent_id' => 0])->with('category')->all()?>
 <div class="wrap">
 
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-color">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -288,6 +288,15 @@ AppAsset::register($this);
                 </div>
             </div>
         </div>
+        </div>
+
+        <div class="margin">
+            <h2>Ищите проверенных исполнителей или выгодные заказы<br>
+                с помощью сервиса Kabanchik.ua</h2>
+            <div>
+                <a href="/">Найти исполнителя</a>
+                <a href="/">Стать исполнителем</a>
+            </div>
         </div>
 
 

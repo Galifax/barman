@@ -85,7 +85,7 @@ AppAsset::register($this);
                         <a href="/">Стать исполнителем</a>
                     </li>
 
-                    <li class="dropdown">
+                    <li class="dropdown hidden-xs">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <span class="glyphicon glyphicon-user"></span> 
                             <strong>Galifax</strong>

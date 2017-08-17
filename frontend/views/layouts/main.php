@@ -217,7 +217,7 @@ AppAsset::register($this);
 
 
     <div class="container">
-<?=$content?>
+        <?=$content?>
 
     </div>
 </div>
@@ -225,7 +225,7 @@ AppAsset::register($this);
 <footer class="footer">
     <div class="container">
         <div class="footer-img-block bg-img1">
-            <div class="img-block-text">
+            <div class="img-block-text col-md-6">
                 <h2>Помочь с выбором подходящего специалиста?</h2>
                 <p>Разместите заявку и в течение 10 минут мы найдем несколько компетентных специалистов для вашей задачи.</p>
                 <a href="/">Оформить заявку</a>

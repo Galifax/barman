@@ -40,9 +40,9 @@ AppAsset::register($this);
                 <a class="navbar-brand" href="#">Brand Logo !!!</a>
             </div>
 
-            <div class="collapse" id="bs-example-navbar-collapse-1" style="background-color: whitesmoke">
+            <div class="collapse" id="bs-example-navbar-collapse-1">
 
-                        <ul class="nav navbar-nav visible-xs"  style="padding: 10px">
+                        <ul class="nav navbar-nav visible-xs"  style="background-color: whitesmoke">
                             <li class="dropdown dropdown-large">
                                 <div class="navbar-login">
                                     <div class="row">

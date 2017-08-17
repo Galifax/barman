@@ -60,6 +60,8 @@ AppAsset::register($this);
     ?>
 
     <div class="container">
+        <a href="" class="btn btn-default">Бармен</a>
+        <a href="" class="btn btn-default create" style="border: 2px solid purple;">Создать задание <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>

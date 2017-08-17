@@ -8,6 +8,8 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
+use frontend\models\Profile;
+use frontend\models\Category;
 use common\widgets\Alert;
 
 AppAsset::register($this);
@@ -24,7 +26,8 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-
+<?php $profile = Profile::find()->where(['id'=>Yii::$app->user->id])->one()?>
+<?php $category = Category::find()->where(['parent_id' => 0])->with('category')->all()?>
 <div class="wrap">
 
     <nav class="navbar navbar-inverse">
@@ -52,7 +55,7 @@ AppAsset::register($this);
                                             </p>
                                         </div>
                                         <div class="col-lg-8">
-                                            <p class="text-left"><strong>Galifax</strong></p>
+                                            <p class="text-left"><strong><?= $profile->name?></strong></p>
                                             <p class="text-left small">Место для текста?!</p>
                                             <p class="text-left">
                                                 <a href="#" class="btn btn-primary btn-block btn-sm">Мой Профиль</a>
@@ -88,7 +91,7 @@ AppAsset::register($this);
                     <li class="dropdown hidden-xs">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <span class="glyphicon glyphicon-user"></span> 
-                            <strong>Galifax</strong>
+                            <strong><?= $profile->name?></strong>
                             <span class="glyphicon glyphicon-chevron-down"></span>
                         </a>
                         <ul class="dropdown-menu">
@@ -101,7 +104,7 @@ AppAsset::register($this);
                                             </p>
                                         </div>
                                         <div class="col-lg-8">
-                                            <p class="text-left"><strong>Galifax</strong></p>
+                                            <p class="text-left"><strong><?= $profile->name?></strong></p>
                                             <p class="text-left small">Место для текста?!</p>
                                             <p class="text-left">
                                                 <a href="#" class="btn btn-primary btn-block btn-sm">Мой Профиль</a>
@@ -131,60 +134,17 @@ AppAsset::register($this);
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Создать задание<b class="caret"></b></a>
 
                         <ul class="dropdown-menu dropdown-menu-large row">
+                            <?php foreach($category as $cat):?>
                             <li class="col-sm-3">
                                 <ul>
-                                    <li class="dropdown-header">Заголовок 1</li>
-                                    <li><a href="#">Услуга 1</a></li>
-                                    <li><a href="#">Услуга 2</a></li>
-                                    <li><a href="#">Услуга 3</a></li>
-                                    <li class="divider"></li>
-                                    <li class="dropdown-header">Заголовок 2</li>
-                                    <li><a href="#">Услуга 1</a></li>
-                                    <li><a href="#">Услуга 2</a></li>
-                                    <li><a href="#">Услуга 3</a></li>
-                                    <li><a href="#">Услуга 4</a></li>
+                                    <li class="dropdown-header"><?= $cat->name?></li>
+                                    <?php foreach($cat->category as $category):?>
+                                    <li><a href="#"><?= $category->name?></a></li>
+                                    <?php endforeach;?>
+                                    
                                 </ul>
                             </li>
-                            <li class="col-sm-3">
-                                <ul>
-                                    <li class="dropdown-header">Заголовок 3</li>
-                                    <li><a href="#">Услуга 1</a></li>
-                                    <li><a href="#">Услуга 2</a></li>
-                                    <li><a href="#">Услуга 3</a></li>
-                                    <li><a href="#">Услуга 4</a></li>
-                                    <li><a href="#">Услуга 5</a></li>
-                                    <li><a href="#">Услуга 6</a></li>
-                                    <li><a href="#">Услуга 7</a></li>
-                                </ul>
-                            </li>
-                            <li class="col-sm-3">
-                                <ul>
-                                    <li class="dropdown-header">Заголовок 4</li>
-                                    <li><a href="#">Услуга 1</a></li>
-                                    <li><a href="#">Услуга 2</a></li>
-                                    <li><a href="#">Услуга 3</a></li>
-                                    <li class="divider"></li>
-                                    <li class="dropdown-header">Заголовок 5</li>
-                                    <li><a href="#">Услуга 1</a></li>
-                                    <li><a href="#">Услуга 2</a></li>
-                                    <li><a href="#">Услуга 3</a></li>
-                                    <li><a href="#">Услуга 4</a></li>
-                                </ul>
-                            </li>
-                            <li class="col-sm-3">
-                                <ul>
-                                    <li class="dropdown-header">Заголовок 6</li>
-                                    <li><a href="#">Услуга 1</a></li>
-                                    <li><a href="#">Услуга 2</a></li>
-                                    <li><a href="#">Услуга 3</a></li>
-                                    <li class="divider"></li>
-                                    <li class="dropdown-header">Заголовок 1</li>
-                                    <li><a href="#">Услуга 1</a></li>
-                                    <li><a href="#">Услуга 2</a></li>
-                                    <li><a href="#">Услуга 3</a></li>
-                                    <li><a href="#">Услуга 4</a></li>
-                                </ul>
-                            </li>
+                        <?php endforeach;?>
                         </ul>
 
                     </li>

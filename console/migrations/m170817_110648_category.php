@@ -8,7 +8,7 @@ class m170817_110648_category extends Migration
     {
         $this->createTable('{{%category}}', [
                 'id' => $this->primaryKey(11),
-                'parent_id' => $this->integer(11)->notNull(),
+                'parent_id' => $this->integer(11),
                 'name' => $this->string(255)->notNull(),
             ]);
         

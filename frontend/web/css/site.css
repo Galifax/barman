@@ -1,7 +1,9 @@
 html,
 body {
     height: 100%;
+    background-color: #FAF9F7;
 }
+
 
 .wrap {
     min-height: 100%;
@@ -12,13 +14,6 @@ body {
 
 .wrap > .container {
     padding: 70px 15px 20px;
-}
-
-.footer {
-    height: 60px;
-    background-color: #f5f5f5;
-    border-top: 1px solid #ddd;
-    padding-top: 20px;
 }
 
 .jumbotron {
@@ -124,7 +119,16 @@ a.desc:after {
      color: white;
 }
 
+/*****************************/
 
+.margin{
+    margin: 50px 0;
+}
+
+
+.bg{
+    background-color: white;
+}
 /***************************/
 /**********Navbar***********/
 /***************************/
@@ -212,6 +216,14 @@ a.desc:after {
         padding: 3px 15px !important;
     }
 }
+
+.navbar-nav > li > .dropdown-menu {
+    margin-top: 0;
+    margin-right: 22%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
 .form-group{
     margin-top: 7px;
     margin-bottom: 0px;
@@ -223,4 +235,250 @@ a.desc:after {
 }
 /***************************/
 /**********Navbar***********/
+/***************************/
+
+/***************************/
+/**********Footer***********/
+/***************************/
+
+
+.footer-img-block{
+}
+
+.bg-img1{
+    height: 380px;
+    background: url("http://cdn.playbuzz.com/cdn/7234b250-0d75-4a7f-b963-a8117c4bc0c6/55be4007-65a5-4a1f-a966-ff73423437a7.jpg") no-repeat center;
+    font-size: 0;
+    position: relative;
+
+}
+.img-block-text{
+    margin: 0;
+    padding: 40px 30px;
+    background: #fff;
+    font-size: 13px;
+    position: absolute;
+    top: 15%;
+    bottom: 15%;
+}
+@media (max-width: 762px) {
+    .img-block-text{
+        margin: 0;
+        padding: 40px 30px;
+        background: #fff;
+        font-size: 13px;
+        position: absolute;
+        top: 10%;
+        bottom: 10%;
+    }
+}
+
+.img-block-text a{
+    padding: 10px;
+    background-color: #cc5555;
+    color: white;
+    text-decoration: none;
+    border: 0px solid;
+    border-radius: 3px;
+}
+
+.ul-li-imgs{
+    text-align: center;
+    list-style: none;
+}
+.ul-li-img{
+    display: inline-block;
+}
+.ul-img{
+    display: block;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+.ul-li-img a{
+    text-decoration: none;
+    color: #333333;
+}
+
+.ul-li-img-arrow{
+    color: #999999;
+    font-size: 75px;
+    position: absolute;
+    top: 20px;
+    right: -35px;
+    left: auto;
+    margin: auto;
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -khtml-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+
+
+/********************************/
+/*          Slider              */
+/********************************/
+
+
+#first-slider .main-container {
+    padding: 0;
+}
+
+
+#first-slider .slide1 h3, #first-slider .slide2 h3, #first-slider .slide3 h3, #first-slider .slide4 h3{
+    color: #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight:700;
+}
+
+#first-slider .slide1 h4,#first-slider .slide2 h4,#first-slider .slide3 h4,#first-slider .slide4 h4{
+    color: #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight:700;
+}
+#first-slider .slide1 .text-left ,#first-slider .slide3 .text-left{
+    padding-left: 40px;
+}
+
+
+#first-slider .carousel-indicators {
+    bottom: 0;
+}
+#first-slider .carousel-control.right,
+#first-slider .carousel-control.left {
+    background-image: none;
+}
+#first-slider .carousel .item {
+    min-height: 425px;
+    height: 100%;
+    width:100%;
+}
+
+.carousel-inner .item .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+
+#first-slider h3{
+    animation-delay: 1s;
+}
+#first-slider h4 {
+    animation-delay: 2s;
+}
+#first-slider h2 {
+    animation-delay: 3s;
+}
+
+
+#first-slider .carousel-control {
+    width: 6%;
+    text-shadow: none;
+}
+
+
+#first-slider h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#first-slider .p {
+    padding-top: 125px;
+    text-align: center;
+}
+
+#first-slider .p a {
+    text-decoration: underline;
+}
+#first-slider .carousel-indicators li {
+    width: 14px;
+    height: 14px;
+    background-color: rgba(255,255,255,.4);
+    border:none;
+}
+#first-slider .carousel-indicators .active{
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border:none;
+}
+
+
+.carousel-fade .carousel-inner .item {
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+}
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+    opacity: 0;
+}
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+    opacity: 1;
+}
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+    left: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+
+
+/********************************/
+/*       Slides backgrounds     */
+/********************************/
+#first-slider .slide1 {
+    background-image: url(http://mazapark.ru/upload/iblock/67c/%D0%91%D0%BE%D1%83%D0%BB%D0%B8%D0%BD%D0%B3-001.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#first-slider .slide2 {
+    background-image: url(http://ic.pics.livejournal.com/tvoirovaniemi/49887290/449205/449205_original.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#first-slider .slide3 {
+    background-image: url(https://img09.rl0.ru/afisha/c1500x600/daily.afisha.ru/uploads/images/b/77/b77f8eca3f724620bc47cc602e70447c.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#first-slider .slide4 {
+    background-image: url(https://strg1.restoran.kz/neofiles/serve-image/568f85c8579f247d370002b5/720x291/c1/q40);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+
+/********************************/
+/*          Media Queries       */
+/********************************/
+@media screen and (min-width: 980px){
+
+}
+@media screen and (max-width: 640px){
+
+}
+/*Slider*/
+
+/***************************/
+/**********Footer***********/
 /***************************/

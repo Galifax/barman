@@ -8,6 +8,8 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
+use frontend\models\Profile;
+use frontend\models\Category;
 use common\widgets\Alert;
 
 AppAsset::register($this);
@@ -24,7 +26,8 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-
+<?php $profile = Profile::find()->where(['id'=>Yii::$app->user->id])->one()?>
+<?php $category = Category::find()->where(['parent_id' => 0])->with('category')->all()?>
 <div class="wrap">
 
     <nav class="navbar navbar-inverse">
@@ -40,9 +43,9 @@ AppAsset::register($this);
                 <a class="navbar-brand" href="#">Brand Logo !!!</a>
             </div>
 
-            <div class="collapse" id="bs-example-navbar-collapse-1" style="background-color: whitesmoke">
+            <div class="collapse" id="bs-example-navbar-collapse-1">
 
-                        <ul class="nav navbar-nav visible-xs"  style="padding: 10px">
+                        <ul class="nav navbar-nav visible-xs"  style="background-color: whitesmoke">
                             <li class="dropdown dropdown-large">
                                 <div class="navbar-login">
                                     <div class="row">
@@ -52,7 +55,7 @@ AppAsset::register($this);
                                             </p>
                                         </div>
                                         <div class="col-lg-8">
-                                            <p class="text-left"><strong>Galifax</strong></p>
+                                            <p class="text-left"><strong><?= $profile->name?></strong></p>
                                             <p class="text-left small">Место для текста?!</p>
                                             <p class="text-left">
                                                 <a href="#" class="btn btn-primary btn-block btn-sm">Мой Профиль</a>
@@ -88,7 +91,7 @@ AppAsset::register($this);
                     <li class="dropdown hidden-xs">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <span class="glyphicon glyphicon-user"></span> 
-                            <strong>Galifax</strong>
+                            <strong><?= $profile->name?></strong>
                             <span class="glyphicon glyphicon-chevron-down"></span>
                         </a>
                         <ul class="dropdown-menu">
@@ -101,7 +104,7 @@ AppAsset::register($this);
                                             </p>
                                         </div>
                                         <div class="col-lg-8">
-                                            <p class="text-left"><strong>Galifax</strong></p>
+                                            <p class="text-left"><strong><?= $profile->name?></strong></p>
                                             <p class="text-left small">Место для текста?!</p>
                                             <p class="text-left">
                                                 <a href="#" class="btn btn-primary btn-block btn-sm">Мой Профиль</a>
@@ -131,60 +134,17 @@ AppAsset::register($this);
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Создать задание<b class="caret"></b></a>
 
                         <ul class="dropdown-menu dropdown-menu-large row">
+                            <?php foreach($category as $cat):?>
                             <li class="col-sm-3">
                                 <ul>
-                                    <li class="dropdown-header">Заголовок 1</li>
-                                    <li><a href="#">Услуга 1</a></li>
-                                    <li><a href="#">Услуга 2</a></li>
-                                    <li><a href="#">Услуга 3</a></li>
-                                    <li class="divider"></li>
-                                    <li class="dropdown-header">Заголовок 2</li>
-                                    <li><a href="#">Услуга 1</a></li>
-                                    <li><a href="#">Услуга 2</a></li>
-                                    <li><a href="#">Услуга 3</a></li>
-                                    <li><a href="#">Услуга 4</a></li>
+                                    <li class="dropdown-header"><?= $cat->name?></li>
+                                    <?php foreach($cat->category as $category):?>
+                                    <li><a href="#"><?= $category->name?></a></li>
+                                    <?php endforeach;?>
+                                    
                                 </ul>
                             </li>
-                            <li class="col-sm-3">
-                                <ul>
-                                    <li class="dropdown-header">Заголовок 3</li>
-                                    <li><a href="#">Услуга 1</a></li>
-                                    <li><a href="#">Услуга 2</a></li>
-                                    <li><a href="#">Услуга 3</a></li>
-                                    <li><a href="#">Услуга 4</a></li>
-                                    <li><a href="#">Услуга 5</a></li>
-                                    <li><a href="#">Услуга 6</a></li>
-                                    <li><a href="#">Услуга 7</a></li>
-                                </ul>
-                            </li>
-                            <li class="col-sm-3">
-                                <ul>
-                                    <li class="dropdown-header">Заголовок 4</li>
-                                    <li><a href="#">Услуга 1</a></li>
-                                    <li><a href="#">Услуга 2</a></li>
-                                    <li><a href="#">Услуга 3</a></li>
-                                    <li class="divider"></li>
-                                    <li class="dropdown-header">Заголовок 5</li>
-                                    <li><a href="#">Услуга 1</a></li>
-                                    <li><a href="#">Услуга 2</a></li>
-                                    <li><a href="#">Услуга 3</a></li>
-                                    <li><a href="#">Услуга 4</a></li>
-                                </ul>
-                            </li>
-                            <li class="col-sm-3">
-                                <ul>
-                                    <li class="dropdown-header">Заголовок 6</li>
-                                    <li><a href="#">Услуга 1</a></li>
-                                    <li><a href="#">Услуга 2</a></li>
-                                    <li><a href="#">Услуга 3</a></li>
-                                    <li class="divider"></li>
-                                    <li class="dropdown-header">Заголовок 1</li>
-                                    <li><a href="#">Услуга 1</a></li>
-                                    <li><a href="#">Услуга 2</a></li>
-                                    <li><a href="#">Услуга 3</a></li>
-                                    <li><a href="#">Услуга 4</a></li>
-                                </ul>
-                            </li>
+                        <?php endforeach;?>
                         </ul>
 
                     </li>
@@ -216,17 +176,121 @@ AppAsset::register($this);
 
 
 
-    <div class="container">
-
+    <div class="container bg" style="height: 100vh">
+        <?=$content?>
 
     </div>
 </div>
 
 <footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+    <div class="container bg">
 
-        <p class="pull-right"><?= Yii::powered() ?></p>
+        <div class="margin">
+            <div class="footer-img-block bg-img1">
+            <div class="img-block-text col-md-6 col-sm-7">
+                <h2>Помочь с выбором подходящего специалиста?</h2>
+                <p>Разместите заявку и в течение 10 минут мы найдем несколько компетентных специалистов для вашей задачи.</p>
+                <a href="/">Оформить заявку</a>
+            </div>
+        </div>
+        </div>
+
+        <div class="margin">
+            <h3 class="text-center">Как работает Barmen</h3>
+
+            <ul class="ul-li-imgs">
+                <li class="ul-li-img col-sm-4">
+                    <span class="ul-li-img-arrow glyphicon glyphicon-menu-right"></span>
+                    <a href="/">
+                        <img class="ul-img" src="https://static.kabanchik.ua/static/images/hiw-1.png?r=25f08dae">
+                        <h4>Создай заявку</h4>
+                        <p>Опишите, что и когда нужно сделать</p>
+                    </a>
+                </li>
+                <li class="ul-li-img col-sm-4">
+                    <span class="ul-li-img-arrow glyphicon glyphicon-menu-right"></span>
+                    <a href="/">
+                        <img class="ul-img" src="https://static.kabanchik.ua/static/images/hiw-2.png?r=3f1514bf">
+                        <h4>Выбери специалиста</h4>
+                        <p>Оставьте отзыв и оценку исполнителю<br>
+                            Создайте задание прямо сейчас</p>
+                    </a>
+                </li>
+                <li class="ul-li-img col-sm-4">
+                    <a href="/">
+                        <img class="ul-img" src="https://static.kabanchik.ua/static/images/hiw-3.png?r=01ac4853">
+                        <h4>Закрой заявку</h4>
+                        <p>Оставьте отзыв и оценку исполнителю</p>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="clearfix"></div>
+
+            <p class="text-center"><a href="">Создайте задание</a> прямо сейчас и найдите специалиста за считанные минуты!</p>
+        </div>
+
+        <div class="margin">
+             <div id="first-slider">
+            <div id="carousel-example-generic" class="carousel slide carousel-fade">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active slide1">
+                        <div class="row"><div class="container">
+                                <div class="col-md-3 text-right">
+                                    <img style="max-width: 200px;"  data-animation="animated zoomInLeft" src="http://s20.postimg.org/pfmmo6qj1/window_domain.png">
+                                </div>
+                                <div class="col-md-9 text-left">
+                                    <h3 data-animation="animated bounceInDown">Add images, or even your logo!</h3>
+                                    <h4 data-animation="animated bounceInUp">Easily use stunning effects</h4>
+                                </div>
+                            </div></div>
+                    </div>
+                    <div class="item slide2">
+                        <div class="row"><div class="container">
+                                <div class="col-md-7 text-left">
+                                    <h3 data-animation="animated bounceInDown"> 50 animation options A beautiful</h3>
+                                    <h4 data-animation="animated bounceInUp">Create beautiful slideshows </h4>
+                                </div>
+                                <div class="col-md-5 text-right">
+                                    <img style="max-width: 200px;"  data-animation="animated zoomInLeft" src="http://s20.postimg.org/sp11uneml/rack_server_unlock.png">
+                                </div>
+                            </div></div>
+                    </div>
+                    <div class="item slide3">
+                        <div class="row"><div class="container">
+                                <div class="col-md-7 text-left">
+                                    <h3 data-animation="animated bounceInDown">Simple Bootstrap Carousel</h3>
+                                    <h4 data-animation="animated bounceInUp">Bootstrap Image Carousel Slider with Animate.css</h4>
+                                </div>
+                                <div class="col-md-5 text-right">
+                                    <img style="max-width: 200px;"  data-animation="animated zoomInLeft" src="http://s20.postimg.org/eq8xvxeq5/globe_network.png">
+                                </div>
+                            </div></div>
+                    </div>
+                    <div class="item slide4">
+                        <div class="row"><div class="container">
+                                <div class="col-md-7 text-left">
+                                    <h3 data-animation="animated bounceInDown">We are creative</h3>
+                                    <h4 data-animation="animated bounceInUp">Get start your next awesome project</h4>
+                                </div>
+                                <div class="col-md-5 text-right">
+                                    <img style="max-width: 200px;"  data-animation="animated zoomInLeft" src="http://s20.postimg.org/9vf8xngel/internet_speed.png">
+                                </div>
+                            </div></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+
+
     </div>
 </footer>
 

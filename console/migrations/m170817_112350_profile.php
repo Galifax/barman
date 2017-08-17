@@ -7,8 +7,7 @@ class m170817_112350_profile extends Migration
     public function up()
     {
          $this->createTable('{{%profile}}', [
-                'id' => $this->primaryKey(11),
-                'user_id' => $this->integer(11)->notNull(),
+                'id' => $this->integer(11)->notNull(),
                 'avatar' => $this->string(255),
                 'name' => $this->string(255)->notNull(),
                 'surname' => $this->string(255)->notNull(),
@@ -22,8 +21,8 @@ class m170817_112350_profile extends Migration
 
             ]);
 
-        $this->createIndex('user_id', '{{%profile}}', 'user_id');
-        $this->addForeignKey('user_fk', '{{%profile}}', 'user_id', '{{%user}}', 'id', 'CASCADE');
+        $this->createIndex('id', '{{%profile}}', 'id');
+        $this->addForeignKey('user_fk', '{{%profile}}', 'id', '{{%user}}', 'id', 'CASCADE');
     }
 
     public function down()

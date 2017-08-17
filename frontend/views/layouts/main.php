@@ -35,10 +35,7 @@ AppAsset::register($this);
                     <span class="glyphicon glyphicon-user"></span> 
                 </button>
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                    <span class="glyphicon glyphicon-menu-hamburger"></span>
                 </button>
                 <a class="navbar-brand" href="#">Brand Logo !!!</a>
             </div>
@@ -220,13 +217,8 @@ AppAsset::register($this);
 
 
     <div class="container">
-        <a href="" class="btn btn-default">Бармен</a>
-        <a href="" class="btn btn-default create" style="border: 2px solid purple;">Создать задание <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= Alert::widget() ?>
-        <?= $content ?>
+
+
     </div>
 </div>
 

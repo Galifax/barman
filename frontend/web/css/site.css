@@ -128,6 +128,9 @@ a.desc:after {
 /***************************/
 /**********Navbar***********/
 /***************************/
+.navbar-header button{
+    color: whitesmoke;
+}
 .navbar-login
 {
     width: 305px;
@@ -211,8 +214,13 @@ a.desc:after {
 }
 .form-group{
     margin-top: 7px;
+    margin-bottom: 0px;
 }
-
+@media (max-width: 992px){
+    .container{
+        width: auto;
+    }
+}
 /***************************/
 /**********Navbar***********/
 /***************************/

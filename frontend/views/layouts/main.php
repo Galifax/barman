@@ -49,13 +49,13 @@ AppAsset::register($this);
                             <li class="dropdown dropdown-large">
                                 <div class="navbar-login">
                                     <div class="row">
-                                        <div class="col-lg-4">
+                                        <div class="col-xs-4">
                                             <p class="text-center">
                                                 <span class="glyphicon glyphicon-user icon-size"></span>
                                             </p>
                                         </div>
-                                        <div class="col-lg-8">
-                                            <p class="text-left"><strong><?= $profile->name?></strong></p>
+                                        <div class="col-xs-8">
+                                            <p class="text-left"><strong><?= $profile->name?></strong>Galifa</p>
                                             <p class="text-left small">Место для текста?!</p>
                                             <p class="text-left">
                                                 <a href="#" class="btn btn-primary btn-block btn-sm">Мой Профиль</a>
@@ -200,7 +200,7 @@ AppAsset::register($this);
 
             <ul class="ul-li-imgs">
                 <li class="ul-li-img col-sm-4">
-                    <span class="ul-li-img-arrow glyphicon glyphicon-menu-right"></span>
+                    <span class="ul-li-img-arrow glyphicon glyphicon-menu-right xs-hidden"></span>
                     <a href="/">
                         <img class="ul-img" src="https://static.kabanchik.ua/static/images/hiw-1.png?r=25f08dae">
                         <h4>Создай заявку</h4>
@@ -208,7 +208,7 @@ AppAsset::register($this);
                     </a>
                 </li>
                 <li class="ul-li-img col-sm-4">
-                    <span class="ul-li-img-arrow glyphicon glyphicon-menu-right"></span>
+                    <span class="ul-li-img-arrow glyphicon glyphicon-menu-right xs-hidden"></span>
                     <a href="/">
                         <img class="ul-img" src="https://static.kabanchik.ua/static/images/hiw-2.png?r=3f1514bf">
                         <h4>Выбери специалиста</h4>
@@ -227,7 +227,8 @@ AppAsset::register($this);
 
             <div class="clearfix"></div>
 
-            <p class="text-center"><a href="">Создайте задание</a> прямо сейчас и найдите специалиста за считанные минуты!</p>
+            <p class="text-center"><a href="/" style="color: green;font-size: 18px;margin: 22px">Создайте задание</a> прямо сейчас и найдите специалиста за считанные минуты!</p>
+
         </div>
 
         <div class="margin">
@@ -290,16 +291,106 @@ AppAsset::register($this);
         </div>
         </div>
 
-        <div class="margin">
+        <div class="margin text-center">
             <h2>Ищите проверенных исполнителей или выгодные заказы<br>
                 с помощью сервиса Kabanchik.ua</h2>
-            <div>
-                <a href="/">Найти исполнителя</a>
-                <a href="/">Стать исполнителем</a>
+            <div class="margin">
+                <a class="btn1" href="/" style="margin-right: 10%">Найти исполнителя</a>
+                <a class="btn1" href="/" style="margin-left: 10%">Стать исполнителем</a>
             </div>
         </div>
+    </div>
+    <div class="footer-bot">
+        <div class="container" style="padding: 50px">
+            <div class="col-sm-4">
 
+                <a href="/" style="font-size: 40px; color: white">Logo</a>
 
+                <ul class="social">
+                    <li>
+                        <a href="/"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="/"><i class="fa fa-vk" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="/"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+                <ul class="footer-info" style="list-style-type: none;">
+                    <li>
+                        <p><i class="fa fa-phone" aria-hidden="true"></i> Контакты службы поддержки</p>
+                    </li>
+                    <li>
+                        <p class="text-center">   0-800-301-141<br>
+                            Звонки на территории Украины бесплатные</p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-envelope-o" aria-hidden="true"></i> support@kabanchik.ua</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-2">
+                <h5 class="text-center">О нас</h5>
+                <ul class="footer-info">
+                    <li>
+                        <a href="/">О проекте</a>
+                    </li>
+                    <li>
+                        <a href="/">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <h5 class="text-center">Как это работает</h5>
+                <ul class="footer-info">
+                    <li>
+                        <a href="/">Как заказать услугу</a>
+                    </li>
+                    <li>
+                        <a href="/">Как зарегистрировать компанию</a>
+                    </li>
+                    <li>
+                        <a href="/">Гарантия и безопасность</a>
+                    </li>
+                    <li>
+                        <a href="/">Интересные задания</a>
+                    </li>
+                    <li>
+                        <a href="/">Последние отзывы</a>
+                    </li>
+                    <li>
+                        <a href="/">Топ исполнителей</a>
+                    </li>
+                    <li>
+                        <a href="/">Все категории услуг</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <h5 class="text-center">Помощь</h5>
+                <ul class="footer-info">
+                    <li>
+                        <a href="/">Вопросы и ответы</a>
+                    </li>
+                    <li>
+                        <a href="/">Публичная оферта</a>
+                    </li>
+                    <li>
+                        <a href="/">Правила конфиденциальности</a>
+                    </li>
+                    <li>
+                        <a href="/">Написать разработчикам</a>
+                    </li>
+                    <li>
+                        <a href="/">Cлужба поддержки</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </footer>
 

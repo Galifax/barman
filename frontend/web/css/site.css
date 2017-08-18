@@ -120,6 +120,14 @@ a.desc:after {
 }
 
 /*****************************/
+.btn1{
+    padding: 12px;
+    background-color: #cc5555;
+    color: whitesmoke;
+    text-decoration: none;
+
+}
+
 
 .margin{
     margin: 50px 0;
@@ -135,13 +143,16 @@ a.desc:after {
 .navbar-color{
     background-color: #1A8F5D;
 }
+.navbar-color a{
+    color: white;
+}
 
 .navbar-header button{
     color: whitesmoke;
 }
 .navbar-login
 {
-    width: 305px;
+    /*width: 305px;*/
     padding: 10px;
     padding-bottom: 0px;
 }
@@ -202,7 +213,7 @@ a.desc:after {
     cursor: not-allowed;
 }
 .dropdown-menu-large .dropdown-header {
-    color: #428bca;
+    color: white;
     font-size: 18px;
 }
 @media (max-width: 768px) {
@@ -223,7 +234,7 @@ a.desc:after {
 
 .navbar-nav > li > .dropdown-menu {
     margin-top: 0;
-    margin-right: 22%;
+    /*margin-right: 22%;*/
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
@@ -265,10 +276,13 @@ a.desc:after {
     top: 15%;
     bottom: 15%;
 }
+.img-block-text p{
+    margin: 0px 0px 30px;
+}
 @media (max-width: 762px) {
     .img-block-text{
         margin: 0;
-        padding: 40px 30px;
+        padding: 0px 30px;
         background: #fff;
         font-size: 13px;
         position: absolute;
@@ -486,3 +500,37 @@ a.desc:after {
 /***************************/
 /**********Footer***********/
 /***************************/
+.social{
+    font-size: 26px;
+    list-style-type: none;
+}
+.social li{
+    display: inline;
+    list-style-type: none;
+    padding-right: 20px;
+
+}
+.social li a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.footer-info{
+    color: whitesmoke;
+}
+.footer-info li{
+
+}
+.footer-info li a{
+    color: whitesmoke;
+}
+
+.footer-bot{
+   background-color: #10784A;
+   color: whitesmoke
+}
+
+footer h5{
+    font-size: 22px;
+    color: white;
+}

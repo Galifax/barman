@@ -181,9 +181,8 @@ AppAsset::register($this);
 
 
 
-    <div class="container bg" style="height: 100vh">
+    <div class="container container-main bg">
         <?=$content?>
-
     </div>
 </div>
 

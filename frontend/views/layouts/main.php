@@ -294,9 +294,13 @@ AppAsset::register($this);
         <div class="margin text-center">
             <h2>Ищите проверенных исполнителей или выгодные заказы<br>
                 с помощью сервиса Kabanchik.ua</h2>
-            <div class="margin">
-                <a class="btn1" href="/" style="margin-right: 10%">Найти исполнителя</a>
-                <a class="btn1" href="/" style="margin-left: 10%">Стать исполнителем</a>
+            <div class="margin row">
+                <div class="col-sm-6">
+                    <a class="btn1" href="/">Найти исполнителя</a>
+                </div>
+                <div class="col-sm-6 f1">
+                    <a class="btn1" href="/">Стать исполнителем</a>
+                </div>
             </div>
         </div>
     </div>

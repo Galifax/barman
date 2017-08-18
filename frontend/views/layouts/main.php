@@ -4,6 +4,7 @@
 /* @var $content string */
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
@@ -88,13 +89,17 @@ AppAsset::register($this);
                         <a href="/">Стать исполнителем</a>
                     </li>
 
-                    <li class="dropdown hidden-xs">
+                   
+
+
+                        <?php if(Yii::$app->user->id):?>
+                             <li class="dropdown hidden-xs">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <span class="glyphicon glyphicon-user"></span> 
                             <strong><?= $profile->name?></strong>
                             <span class="glyphicon glyphicon-chevron-down"></span>
                         </a>
-                        <ul class="dropdown-menu">
+                             <ul class="dropdown-menu">
                             <li>
                                 <div class="navbar-login">
                                     <div class="row">
@@ -107,7 +112,7 @@ AppAsset::register($this);
                                             <p class="text-left"><strong><?= $profile->name?></strong></p>
                                             <p class="text-left small">Место для текста?!</p>
                                             <p class="text-left">
-                                                <a href="#" class="btn btn-primary btn-block btn-sm">Мой Профиль</a>
+                                                <a href="" class="btn btn-primary btn-block btn-sm">Мой Профиль</a>
                                             </p>
                                         </div>
                                     </div>
@@ -119,13 +124,24 @@ AppAsset::register($this);
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <p>
-                                                <a href="#" class="btn btn-danger btn-block">Выйти</a>
+                                                <a href="<?=Url::to(['/site/logout'])?>" class="btn btn-danger btn-block">Выйти</a>
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                             </li>
                         </ul>
+                        <?php else:?>
+                        <li class="dropdown hidden-xs">
+                        <a href="#" class="dropdown-toggle" id="login" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-user"></span> 
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                        <div class="dropdown-menu" id="login-load" style="padding: 20px; width: 300px;">
+                        </div>
+                        </li>
+                       <?php endif;?>
+
                     </li>
                 </ul>
 

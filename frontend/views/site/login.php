@@ -5,6 +5,7 @@
 /* @var $model \common\models\LoginForm */
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
 
 $this->title = 'Login';
@@ -15,8 +16,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>Пожалуйста заполните поля для входа:</p>
 
-    <div class="row">
-        <div class="col-lg-5">
             <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
 
                 <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
@@ -31,9 +30,9 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <div class="form-group">
                     <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
+                    <a href="<?=Url::to(['/site/signup'])?>" class="btn btn-success">Регистрация</a>
                 </div>
 
             <?php ActiveForm::end(); ?>
-        </div>
-    </div>
+
 </div>

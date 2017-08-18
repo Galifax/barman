@@ -12,6 +12,8 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use frontend\models\Category;
+
 
 /**
  * Site controller
@@ -215,5 +217,12 @@ class SiteController extends Controller
         return $this->render('resetPassword', [
             'model' => $model,
         ]);
+    }
+
+    public function actionCategory()
+    {
+         $model = Category::find()->where(['parent_id' => 0])->with('category')->all();
+
+         return $this->renderAjax('category', compact('model'));
     }
 }

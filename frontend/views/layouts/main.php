@@ -10,7 +10,6 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use frontend\models\Profile;
-use frontend\models\Category;
 use common\widgets\Alert;
 
 AppAsset::register($this);
@@ -28,7 +27,7 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 <?php $profile = Profile::find()->where(['id'=>Yii::$app->user->id])->one()?>
-<?php $category = Category::find()->where(['parent_id' => 0])->with('category')->all()?>
+
 <div class="wrap">
 
     <nav class="navbar navbar-color navbar-fixed-top">
@@ -147,20 +146,10 @@ AppAsset::register($this);
 
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown dropdown-large">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Создать задание<b class="caret"></b></a>
+                        <a id="category" href="" class="dropdown-toggle" data-toggle="dropdown">Создать задание<b class="caret"></b></a>
 
-                        <ul class="dropdown-menu dropdown-menu-large row">
-                            <?php foreach($category as $cat):?>
-                            <li class="col-sm-3">
-                                <ul>
-                                    <li class="dropdown-header"><?= $cat->name?></li>
-                                    <?php foreach($cat->category as $category):?>
-                                    <li><a href="#"><?= $category->name?></a></li>
-                                    <?php endforeach;?>
-                                    
-                                </ul>
-                            </li>
-                        <?php endforeach;?>
+                        <ul id="category-load" class="dropdown-menu dropdown-menu-large row">
+                           
                         </ul>
 
                     </li>

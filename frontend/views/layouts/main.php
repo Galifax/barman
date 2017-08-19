@@ -26,7 +26,11 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-<?php $profile = Profile::find()->where(['id'=>Yii::$app->user->id])->one()?>
+<?php 
+if(Yii::$app->user->id){
+$profile = Profile::find()->where(['id'=>Yii::$app->user->id])->one();
+}
+?>
 
 <div class="wrap">
 

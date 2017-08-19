@@ -1,5 +1,5 @@
 <?php foreach($model as $cat):?>
-                            <li class="col-sm-3">
+                       <li class="col-sm-3">
                                 <ul>
                                     <li class="dropdown-header"><?= $cat->name?></li>
                                     <?php foreach($cat->category as $category):?>

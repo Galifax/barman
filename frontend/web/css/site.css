@@ -13,8 +13,8 @@ body {
 
 
 .wrap {
-    min-height: 100%;
-    height: auto;
+/*    min-height: 100%;
+*/    height: auto;
     margin: 0 auto -60px;
     padding: 0 0 60px;
 }
@@ -559,9 +559,10 @@ footer h5{
 }
 
 .main-promo {
-    height: 580px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                      url(/assets/8c623ddc/i/main-promo-bg.jpg);
+    margin-top: 20px;
+    min-height: 580px;
+    background-image: /*linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),*/ 
+                      url(https://static.kabanchik.ua/static/images/main-bg.jpg?r=8125);
     background-position: center bottom;
     background-size: cover;
     background-repeat: no-repeat;

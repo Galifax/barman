@@ -12,6 +12,8 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use frontend\models\Profile;
+use frontend\models\User;
 
 /**
  * Site controller
@@ -72,7 +74,11 @@ class ProfileController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $model = Profile::find()->where(['id'=>Yii::$app->user->id])->with('user')->one();
+        if ($model->load(Yii::$app->request->post())){
+            $model->save();
+        }
+        return $this->render('index', compact('model'));
     }
 
       public function actionFindJob()

@@ -7,11 +7,13 @@
 
 
     ?>
+  
 
 <h1>Профиль: <?= $model->name?></h1>
 <?php $form = ActiveForm::begin([
     'options' => ['data-pjax' => true],
 ]) ?>
+    <?= $form->field($model, 'id')->hiddenInput(['value' => Yii::$app->user->id])->label(false) ?>
     <?= $form->field($model, 'avatar')->textInput() ?>
     <?= $form->field($model, 'name')->textInput() ?>
     <?= $form->field($model, 'surname')->textInput() ?>
@@ -27,3 +29,4 @@
             <?= Html::submitButton('Редактировать', ['class' => 'btn btn-success']) ?>
     </div>
 <?php ActiveForm::end(); 
+

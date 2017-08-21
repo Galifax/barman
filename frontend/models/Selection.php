@@ -28,8 +28,9 @@ class Selection extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['id', 'status'], 'required'],
             [['id', 'status'], 'integer'],
-            [['status'], 'required'],
+            [['id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['id' => 'id']],
         ];
     }
 

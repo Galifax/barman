@@ -8,7 +8,6 @@ use Yii;
  * This is the model class for table "profile".
  *
  * @property integer $id
- * @property integer $user_id
  * @property string $avatar
  * @property string $name
  * @property string $surname
@@ -20,7 +19,7 @@ use Yii;
  * @property string $from
  * @property string $contacts
  *
- * @property User $user
+ * @property User $id0
  */
 class Profile extends \yii\db\ActiveRecord
 {
@@ -38,7 +37,7 @@ class Profile extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'name', 'surname', 'born', 'category', 'status', 'from'], 'required'],
+            [['id', 'born'], 'required'],
             [['id', 'status'], 'integer'],
             [['born'], 'safe'],
             [['avatar', 'name', 'surname', 'patronymic', 'category', 'from', 'contacts'], 'string', 'max' => 255],
@@ -70,7 +69,7 @@ class Profile extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getUser()
+    public function getId0()
     {
         return $this->hasOne(User::className(), ['id' => 'id']);
     }

@@ -14,6 +14,7 @@ use frontend\models\SignupForm;
 use frontend\models\ContactForm;
 use frontend\models\Profile;
 use frontend\models\User;
+use frontend\models\Selection;
 
 /**
  * Site controller
@@ -74,10 +75,14 @@ class ProfileController extends Controller
      */
     public function actionIndex()
     {
-        $model = Profile::find()->where(['id'=>Yii::$app->user->id])->with('user')->one();
-        if ($model->load(Yii::$app->request->post())){
-            $model->save();
+        $model = Profile::find()->where(['id'=> Yii::$app->user->id])->one();
+        if(empty($model)){
+            $model = new Profile();
         }
+
+        if($model->load(Yii::$app->request->post()) &&  $model->save());
+         
+
         return $this->render('index', compact('model'));
     }
 

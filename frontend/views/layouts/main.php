@@ -164,8 +164,10 @@ AppAsset::register($this);
                             <div class="input-group">
                                 <input class="form-control" type="text" name="search" placeholder="Search" required/>
                                 <span class="input-group-btn">
-                            <button class="btn btn-success" type="submit"><span class="glyphicon glyphicon-search" aria-hidden="true"><span style="margin-left:10px;">Search</span></button>
-                        </span>
+                                    <button class="btn btn-success" type="submit">
+                                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                        <span style="margin-left:10px;">Search</span>
+                                    </button>
                                 </span>
                             </div>
                         </div>

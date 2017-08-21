@@ -558,7 +558,6 @@ footer h5{
 }
 
 .main-promo {
-    margin-top: 20px;
     min-height: 580px;
     background-image: /*linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),*/ 
                       url(https://static.kabanchik.ua/static/images/main-bg.jpg?r=8125);
@@ -569,7 +568,7 @@ footer h5{
     color: white;
 
     padding-top: 150px;
-
+    padding-bottom: 30px;
     overflow: hidden;
 
 }
@@ -583,6 +582,7 @@ footer h5{
 .main-promo__title {
     font-size: 45px;
     margin-bottom: 25px;
+    font-weight: 300;
 }
 
 .main-promo__subtitle {
@@ -591,47 +591,68 @@ footer h5{
 }
 
 .main-promo__search {
-    position: relative;
-    width: 60%;
+    max-width: 600px;
     margin: 0 auto;
 }
 
 .main-promo__search form {
-    font-size: 0;
+    font-weight: 300;
 }
 
-.main-promo__search button {
+.main-promo__search-button {
+    /* float: right; */
+    /* width: 100px; */
+    /* right: 0; */
+    /* top: 0; */
+    /* position: absolute; */
+    display: block;
+    /* width: 100%; */
+    float: right;
+    width: auto;
+    text-align: left;
+}
+
+.main-promo__search-button button {
     background-color: #ff5722;
-    /*position: absolute;*/
     border-radius: 0 3px 3px 0;
     border: 1px solid transparent;
     height: 50px;
     display: inline-block;
     font-size: 16px;
     transition: background .3s;
-    width: 40%;
     white-space: nowrap;
+    padding: 0 20px;
 }
 
-
-.main-promo__search button:hover {
+.main-promo__search-button button:hover {
     background-color: #e34310;
 }
 
-.main-promo__search button span {
+.main-promo__search-button button span {
     margin: 0 auto;
 }
 
-.main-promo__search input {
+.main-promo__search-field {
+    /* width: 100%; */
+    /* float: left; */
+    overflow: auto;
+    text-align: left;
+    background: cadetblue;
+    /* float: left; */
+}
+
+.main-promo__search-field input {
     display: inline-block;
     height: 50px;
     padding: 0 15px;
     border: 1px solid #d9d9d9;
     border-radius: 3px 0 0 3px;
     font-size: 16px;
-    width: 60%;
     color: black;
+    width: 100%;
 }
+
+
 
 .main-promo__search-hint {
     margin-top: 5px;
@@ -641,6 +662,54 @@ footer h5{
 
 .main-promo__search-hint-link {
     text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+    .main-promo {
+        padding-top: 75px;
+    }
+
+    .main-promo__title {
+        font-size: 32px;
+    }
+
+    .main-promo__content {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .main-promo__subtitle {
+        font-size: 16px;
+        margin-bottom: 45px;
+    }
+
+    .main-promo__search-field {
+        width: 100%;
+        position: relative;
+        bottom: 50px;
+    }
+
+    .main-promo__search-field input {
+        border-radius: 3px 3px 0 0;
+    }
+
+    .main-promo__search-button {
+        float: none;
+        width: 100%;
+        position: relative;
+        top: 50px;
+    }
+
+    .main-promo__search-button button {
+        width: 100%;
+        border-radius: 0 0 3px 3px;
+    }
+
+    .main-promo__search-hint {
+        text-align: center;
+    }
 }
 
 /*.b-button {

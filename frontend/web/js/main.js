@@ -4,3 +4,7 @@ $('#login').click(function(){
 $('#category').click(function(){
 	$('#category-load').load('/site/category');
 });
+
+$('#rad2').click(function(){
+        $('#radio2').attr('chacked');
+    });

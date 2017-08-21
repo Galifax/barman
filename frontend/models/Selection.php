@@ -52,4 +52,8 @@ class Selection extends \yii\db\ActiveRecord
     {
         return $this->hasOne(User::className(), ['id' => 'id']);
     }
+    public function getProfile()
+    {
+        return $this->hasOne(Profile::className(), ['id' => 'id']);
+    }
 }

@@ -75,8 +75,8 @@ class User extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getSelections()
+    public function getSelection()
     {
-        return $this->hasMany(Selection::className(), ['id' => 'id']);
+        return $this->hasOne(Selection::className(), ['id' => 'id']);
     }
 }

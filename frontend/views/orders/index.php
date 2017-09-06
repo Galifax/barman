@@ -7,7 +7,7 @@ $this->title = 'Barmen';
 
 <div class="col-sm-9" style="margin-top: 15px;">
     <div class="row">
-        <div class="categiry-order col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Data1">
+        <div class="categiry-order col-lg-4 col-md-4 col-sm-4 col-xs-12 filter Data1">
             <div class="cuadro_intro_hover " style="background-color:#cccccc;">
                 <p style="text-align:center; margin-top:20px;">
                     <img src="http://placehold.it/500x330" class="img-responsive" alt="">
@@ -23,7 +23,7 @@ $this->title = 'Barmen';
             </div>
         </div>
 
-        <div class="categiry-order col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Data1">
+        <div class="categiry-order col-lg-4 col-md-4 col-sm-4 col-xs-12 filter Data1">
             <div class="cuadro_intro_hover " style="background-color:#cccccc;">
                 <p style="text-align:center; margin-top:20px;">
                     <img src="http://placehold.it/500x330" class="img-responsive" alt="">
@@ -38,7 +38,7 @@ $this->title = 'Barmen';
                 </div>
             </div>        </div>
 
-        <div class="categiry-order col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Data2">
+        <div class="categiry-order col-lg-4 col-md-4 col-sm-4 col-xs-12 filter Data2">
             <div class="cuadro_intro_hover " style="background-color:#cccccc;">
                 <p style="text-align:center; margin-top:20px;">
                     <img src="http://placehold.it/500x330" class="img-responsive" alt="">
@@ -53,7 +53,7 @@ $this->title = 'Barmen';
                 </div>
             </div>        </div>
 
-        <div class="categiry-order col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Data2">
+        <div class="categiry-order col-lg-4 col-md-4 col-sm-4 col-xs-12 filter Data2">
             <div class="cuadro_intro_hover " style="background-color:#cccccc;">
                 <p style="text-align:center; margin-top:20px;">
                     <img src="http://placehold.it/500x330" class="img-responsive" alt="">
@@ -68,7 +68,7 @@ $this->title = 'Barmen';
                 </div>
             </div>        </div>
 
-        <div class="categiry-order col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Data2">
+        <div class="categiry-order col-lg-4 col-md-4 col-sm-4 col-xs-12 filter Data2">
             <div class="cuadro_intro_hover " style="background-color:#cccccc;">
                 <p style="text-align:center; margin-top:20px;">
                     <img src="http://placehold.it/500x330" class="img-responsive" alt="">
@@ -83,7 +83,7 @@ $this->title = 'Barmen';
                 </div>
             </div>        </div>
 
-        <div class="categiry-order col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Data2">
+        <div class="categiry-order col-lg-4 col-md-4 col-sm-4 col-xs-12 filter Data2">
             <div class="cuadro_intro_hover " style="background-color:#cccccc;">
                 <p style="text-align:center; margin-top:20px;">
                     <img src="http://placehold.it/500x330" class="img-responsive" alt="">
@@ -98,7 +98,7 @@ $this->title = 'Barmen';
                 </div>
             </div>        </div>
 
-        <div class="categiry-order col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Data3">
+        <div class="categiry-order col-lg-4 col-md-4 col-sm-4 col-xs-12 filter Data3">
             <div class="cuadro_intro_hover " style="background-color:#cccccc;">
                 <p style="text-align:center; margin-top:20px;">
                     <img src="http://placehold.it/500x330" class="img-responsive" alt="">
@@ -113,7 +113,7 @@ $this->title = 'Barmen';
                 </div>
             </div>        </div>
 
-        <div class="categiry-order col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Data3">
+        <div class="categiry-order col-lg-4 col-md-4 col-sm-4 col-xs-12 filter Data3">
             <div class="cuadro_intro_hover " style="background-color:#cccccc;">
                 <p style="text-align:center; margin-top:20px;">
                     <img src="http://placehold.it/500x330" class="img-responsive" alt="">
@@ -128,7 +128,7 @@ $this->title = 'Barmen';
                 </div>
             </div>        </div>
 
-        <div class="categiry-ordert col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Data3">
+        <div class="categiry-order col-lg-4 col-md-4 col-sm-4 col-xs-12 filter Data3">
         <div class="cuadro_intro_hover " style="background-color:#cccccc;">
             <p style="text-align:center; margin-top:20px;">
                 <img src="http://placehold.it/500x330" class="img-responsive" alt="">

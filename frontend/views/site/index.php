@@ -30,8 +30,151 @@ $this->title = 'Barmen';
             
         </div>
     </div>
-</div>
 
+    <h3 class="text-center">Выберите категорию</h3>
+
+    <hr>
+<div class="container" style="padding: 15px 50px">
+    <div class="row">
+        <div class="categiry-order col-lg-4 col-md-4 col-sm-4 col-xs-12 filter Data1">
+            <div class="cuadro_intro_hover " style="background-color:#cccccc;">
+                <p style="text-align:center; margin-top:20px;">
+                    <img src="http://placehold.it/500x330" class="img-responsive" alt="">
+                </p>
+                <div class="caption">
+                    <div class="blur"></div>
+                    <div class="caption-text">
+                        <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">Data1</h3>
+                        <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+                        <a class=" btn btn-default" href="#"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="categiry-order col-lg-4 col-md-4 col-sm-4 col-xs-12 filter Data1">
+            <div class="cuadro_intro_hover " style="background-color:#cccccc;">
+                <p style="text-align:center; margin-top:20px;">
+                    <img src="http://placehold.it/500x330" class="img-responsive" alt="">
+                </p>
+                <div class="caption">
+                    <div class="blur"></div>
+                    <div class="caption-text">
+                        <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">Data1</h3>
+                        <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+                        <a class=" btn btn-default" href="#"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+                    </div>
+                </div>
+            </div>        </div>
+
+        <div class="categiry-order col-lg-4 col-md-4 col-sm-4 col-xs-12 filter Data2">
+            <div class="cuadro_intro_hover " style="background-color:#cccccc;">
+                <p style="text-align:center; margin-top:20px;">
+                    <img src="http://placehold.it/500x330" class="img-responsive" alt="">
+                </p>
+                <div class="caption">
+                    <div class="blur"></div>
+                    <div class="caption-text">
+                        <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">Data2</h3>
+                        <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+                        <a class=" btn btn-default" href="#"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+                    </div>
+                </div>
+            </div>        </div>
+
+        <div class="categiry-order col-lg-4 col-md-4 col-sm-4 col-xs-21 filter Data2">
+            <div class="cuadro_intro_hover " style="background-color:#cccccc;">
+                <p style="text-align:center; margin-top:20px;">
+                    <img src="http://placehold.it/500x330" class="img-responsive" alt="">
+                </p>
+                <div class="caption">
+                    <div class="blur"></div>
+                    <div class="caption-text">
+                        <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">Data2</h3>
+                        <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+                        <a class=" btn btn-default" href="#"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+                    </div>
+                </div>
+            </div>        </div>
+
+        <div class="categiry-order col-lg-4 col-md-4 col-sm-4 col-xs-12 filter Data2">
+            <div class="cuadro_intro_hover " style="background-color:#cccccc;">
+                <p style="text-align:center; margin-top:20px;">
+                    <img src="http://placehold.it/500x330" class="img-responsive" alt="">
+                </p>
+                <div class="caption">
+                    <div class="blur"></div>
+                    <div class="caption-text">
+                        <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">Data2</h3>
+                        <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+                        <a class=" btn btn-default" href="#"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+                    </div>
+                </div>
+            </div>        </div>
+
+        <div class="categiry-order col-lg-4 col-md-4 col-sm-4 col-xs-12 filter Data2">
+            <div class="cuadro_intro_hover " style="background-color:#cccccc;">
+                <p style="text-align:center; margin-top:20px;">
+                    <img src="http://placehold.it/500x330" class="img-responsive" alt="">
+                </p>
+                <div class="caption">
+                    <div class="blur"></div>
+                    <div class="caption-text">
+                        <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">Data2</h3>
+                        <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+                        <a class=" btn btn-default" href="#"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+                    </div>
+                </div>
+            </div>        </div>
+
+        <div class="categiry-order col-lg-4 col-md-4 col-sm-4 col-xs-12 filter Data3">
+            <div class="cuadro_intro_hover " style="background-color:#cccccc;">
+                <p style="text-align:center; margin-top:20px;">
+                    <img src="http://placehold.it/500x330" class="img-responsive" alt="">
+                </p>
+                <div class="caption">
+                    <div class="blur"></div>
+                    <div class="caption-text">
+                        <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">Data3</h3>
+                        <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+                        <a class=" btn btn-default" href="#"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+                    </div>
+                </div>
+            </div>        </div>
+
+        <div class="categiry-order col-lg-4 col-md-4 col-sm-4 col-xs-12 filter Data3">
+            <div class="cuadro_intro_hover " style="background-color:#cccccc;">
+                <p style="text-align:center; margin-top:20px;">
+                    <img src="http://placehold.it/500x330" class="img-responsive" alt="">
+                </p>
+                <div class="caption">
+                    <div class="blur"></div>
+                    <div class="caption-text">
+                        <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">Data3</h3>
+                        <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+                        <a class=" btn btn-default" href="#"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+                    </div>
+                </div>
+            </div>        </div>
+
+        <div class="categiry-order col-lg-4 col-md-4 col-sm-4 col-xs-12 filter Data3">
+            <div class="cuadro_intro_hover " style="background-color:#cccccc;">
+                <p style="text-align:center; margin-top:20px;">
+                    <img src="http://placehold.it/500x330" class="img-responsive" alt="">
+                </p>
+                <div class="caption">
+                    <div class="blur"></div>
+                    <div class="caption-text">
+                        <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">Data3</h3>
+                        <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+                        <a class=" btn btn-default" href="#"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+                    </div>
+                </div>
+            </div>        </div>
+    </div>
+
+    <h1 class="text-center">Не нашли нужную услугу? Смотрите внимательнее!</h1
+</div>
 <div class="container bg">
 
     <div class="margin">
@@ -152,4 +295,6 @@ $this->title = 'Barmen';
             </div>
         </div>
     </div>
+</div>
+
 </div>

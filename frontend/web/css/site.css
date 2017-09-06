@@ -757,6 +757,12 @@ footer h5{
 }
 */
 
+.filter-list-main-page{
+    list-style: none;
+}
+.filter-list-main-page li{
+    display: inline;
+}
 /*=====  End of Index Page   ======*/
 
 /*=====  Start orders page   ======*/
@@ -810,6 +816,9 @@ footer h5{
 .filter-list li{
     list-style-type: none;
 }
+.filter-list li .filter-button{
+    width: 100%;
+}
 
 .filter-button
 {
@@ -819,8 +828,6 @@ footer h5{
     text-align: center;
     color: #42B32F;
     margin-bottom: 10px;
-    width: 100%;
-
 }
 .filter-button:hover
 {

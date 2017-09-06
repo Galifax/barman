@@ -7,6 +7,15 @@ body {
     line-height: 1.3;
 }
 
+ul,li{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
 .bg{
     background-color: white;
 }
@@ -749,3 +758,141 @@ footer h5{
 */
 
 /*=====  End of Index Page   ======*/
+
+/*=====  Start orders page   ======*/
+.cuadro_intro_hover{
+    padding: 0px;
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+}
+.cuadro_intro_hover:hover .caption{
+    opacity: 1;
+    transform: translateY(-150px);
+    -webkit-transform:translateY(-150px);
+    -moz-transform:translateY(-150px);
+    -ms-transform:translateY(-150px);
+    -o-transform:translateY(-150px);
+}
+.cuadro_intro_hover img{
+    z-index: 4;
+}
+.cuadro_intro_hover .caption{
+    position: absolute;
+    top:150px;
+    -webkit-transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out;
+    -o-transition:all 0.3s ease-in-out;
+    -ms-transition:all 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
+    width: 100%;
+}
+.cuadro_intro_hover .blur{
+    background-color: rgba(0,0,0,0.7);
+    height: 300px;
+    z-index: 5;
+    position: absolute;
+    width: 100%;
+}
+.cuadro_intro_hover .caption-text{
+    z-index: 10;
+    color: #fff;
+    position: absolute;
+    height: 300px;
+    text-align: center;
+    top:-20px;
+    width: 100%;
+}
+/*==========filter==============*/
+.filter-list{
+    padding: 0px;
+}
+.filter-list li{
+    list-style-type: none;
+}
+
+.filter-button
+{
+    font-size: 18px;
+    border: 1px solid #42B32F;
+    border-radius: 5px;
+    text-align: center;
+    color: #42B32F;
+    margin-bottom: 10px;
+    width: 100%;
+
+}
+.filter-button:hover
+{
+    font-size: 18px;
+    border: 1px solid #42B32F;
+    border-radius: 5px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #42B32F;
+
+}
+.btn-default:active .filter-button:active
+{
+    background-color: #42B32F;
+    color: white;
+}
+
+.port-image
+{
+    width: 100%;
+}
+
+.categiry-order
+{
+    margin-bottom: 30px;
+}
+/*==========Orders=========*/
+.border{ border-bottom:1px solid #ddd;}
+
+.add{background: #333; padding: 10%; height: 300px;}
+
+
+.btn-blog {
+    color: #ffffff;
+    background-color: #000066;
+    border-color: #000066;
+    border-radius:0;
+    margin-bottom:10px
+}
+.btn-blog:hover,
+.btn-blog:focus,
+.btn-blog:active,
+.btn-blog.active,
+.open .dropdown-toggle.btn-blog {
+    color: white;
+    background-color:#34ca78;
+    border-color: #34ca78;
+}
+
+.margin10{margin-bottom:10px; margin-right:10px;}
+
+.other-cities{
+   list-style: none;
+}
+.other-cities li{
+    display: inline;
+}
+.other-cities li a{
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    line-height: 20px;
+    padding: 5px;
+
+}
+.other-cities li a:hover{
+    outline: 0 none;
+    color: #34ca78;
+    cursor: pointer;
+    text-decoration: underline ;
+    transition: color 0.2s ease;
+}
+
+/*=====  End orders page   ======*/

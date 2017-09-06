@@ -13,6 +13,7 @@ use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
 use frontend\models\Category;
+use frontend\models\Selection;
 
 
 /**
@@ -157,9 +158,14 @@ class SiteController extends Controller
     public function actionSignup()
     {
         $model = new SignupForm();
+        $selection = new Selection();
         if ($model->load(Yii::$app->request->post())) {
             if ($user = $model->signup()) {
+                 $selection->id = $user->id;
+                 $selection->status = $_POST['Selection']['status'];
+                 $selection->save();
                 if (Yii::$app->getUser()->login($user)) {
+
                     return $this->goHome();
                 }
             }
@@ -167,6 +173,7 @@ class SiteController extends Controller
 
         return $this->render('signup', [
             'model' => $model,
+            'selection' => $selection,
         ]);
     }
 

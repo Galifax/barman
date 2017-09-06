@@ -5,6 +5,7 @@ $('#category').click(function(){
 	$('#category-load').load('/site/category');
 });
 
+<<<<<<< HEAD
 
 
 !function(d){var c="portfilter";
@@ -17,3 +18,8 @@ $('#category').click(function(){
         if(!f){g.data(c,(f=new b(this)))}if(e=="filter"){f.filter()}})};
     d.fn[c].defaults={};d.fn[c].Constructor=b;d.fn[c].noConflict=function(){d.fn[c]=a;return this};d(document).on("click.portfilter.data-api","[data-toggle^=portfilter]",function(f){d(this).portfilter("filter")})}(window.jQuery);
 
+=======
+$('#rad2').click(function(){
+        $('#radio2').attr('chacked');
+    });
+>>>>>>> e90933528a55c74815297f1580f6effd5f83dc17

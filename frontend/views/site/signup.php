@@ -25,6 +25,18 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <?= $form->field($model, 'password')->passwordInput() ?>
 
+                <div class="col-md-6" style="padding-left: 0">
+                <div class="btn btn-info" style="width: 100%;">
+                <?= $form->field($selection, 'status')->radio(['label' => 'Работодатель', 'value' => 0, 'id' => 'radio1']) ?>
+                </div>
+                </div>
+
+                <div class="col-md-6" style="padding-right: 0">
+                <div class="btn btn-danger" id="rad2" style="width: 100%;">
+                <?= $form->field($selection, 'status')->radio(['label' => 'Работник', 'value' => 1, 'id' => 'radio2']) ?>
+                </div>
+                </div>
+                <div class="clearfix"></div>
                 <div class="form-group">
                     <?= Html::submitButton('Signup', ['class' => 'btn btn-primary', 'name' => 'signup-button']) ?>
                 </div>

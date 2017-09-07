@@ -76,7 +76,16 @@ class ProfileController extends Controller
      */
     public function actionIndex()
     {
-        $selection = Selection::find()->where(['id'=> Yii::$app->user->id])->one();
+
+    $model = Profile::find()->where(['id'=> Yii::$app->user->id])->with('user.selection')->one();
+
+
+        return $this->render('index', compact('model'));
+    }
+
+      public function actionSettings()
+    {
+          $selection = Selection::find()->where(['id'=> Yii::$app->user->id])->one();
         if ($selection->status == 1){
             $model = Profile::find()->where(['id'=> Yii::$app->user->id])->with('user.selection')->one();
         if(empty($model)){
@@ -92,16 +101,10 @@ class ProfileController extends Controller
         }
         }
         
-
         if($model->load(Yii::$app->request->post()) &&  $model->save());
          
-
-        return $this->render('index', compact('model', 'selection'));
-    }
-
-      public function actionFindJob()
-    {
-        return $this->render('find-job');
+        return $this->renderAjax('settings', compact('selection', 'model'));
+     
     }
 
 

@@ -44,10 +44,10 @@ $profile = Profile::find()->where(['id'=>Yii::$app->user->id])->one();
                                     <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span
                                             class="icon-bar"></span><span class="icon-bar"></span>
                                 </button>
-                                <a class="navbar-brand" href="./ORqmj" style="margin-right:-8px; margin-top:-5px;">
+                                <a class="navbar-brand" href="/" style="margin-right:-8px; margin-top:-5px;">
                                     <img alt="Brand" src="https://lut.im/7trApsDX08/GeilMRp1FIm4f2p7.png" width="30px" height="30px">
                                 </a>
-                                <a class="navbar-brand" href="./ORqmj">Project*</a>
+                                <a class="navbar-brand" href="/">Barman*</a>
                                 <i class="brand_network"><small><small>diaspora* Network</small></small></i>
                             </div>
                             <div class="navbar-collapse collapse">
@@ -81,7 +81,7 @@ $profile = Profile::find()->where(['id'=>Yii::$app->user->id])->one();
                                                                 example@pods.tld</p>
                                                             <div class="divider">
                                                             </div>
-                                                            <a href="./56ExR" class="btn btn-default btn-xs"><i class="fa fa-user-o" aria-hidden="true"></i> Profile</a>
+                                                            <a href="<?=Url::to(['/profile'])?>" class="btn btn-default btn-xs"><i class="fa fa-user-o" aria-hidden="true"></i> Profile</a>
                                                             <a href="#" class="btn btn-default btn-xs"><i class="fa fa-address-card-o" aria-hidden="true"></i> Contacts</a>
                                                             <a href="#" class="btn btn-default btn-xs"><i class="fa fa-cogs" aria-hidden="true"></i> Settings</a>
                                                             <a href="#" class="btn btn-default btn-xs"><i class="fa fa-question-circle-o" aria-hidden="true"></i> Help!</a>
@@ -110,7 +110,9 @@ $profile = Profile::find()->where(['id'=>Yii::$app->user->id])->one();
                 </div>
             </div>
         </div>
-        <div class="container container-main bg">
+        <div class="container container-main bg" style="margin-top: 70px">
+        <input type="text" name="" id="notify">
+        <button onclick="notifyMe()">Notify me!</button>
             <?=$content?>
         </div>
     </div>
@@ -180,7 +182,18 @@ $profile = Profile::find()->where(['id'=>Yii::$app->user->id])->one();
         </div>
     </div>
 </div>
+<script type="text/javascript">
+if(Notification.requestPermission()){
+    var e = new Notification('kabanchik', {
+        body: "Открытие кабанчика этой осенью",
+        icon: "http://picslife.ru/wp-content/uploads/2012/10/krasivyie-foto-oseni_28.jpg",
+        tag: '123456',
+        requireInteraction: true
+    });
+  }
 
+
+</script>
 <?php $this->endBody() ?>
 </body>
 </html>

@@ -32,3 +32,14 @@ $(document).ready(function(){
     $(this).addClass("active");
 
 });
+
+
+// ======proffile start======
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+
+$(function () {
+    $('[data-toggle="popover"]').popover()
+})
+// ============proffile end=======

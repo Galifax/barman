@@ -33,259 +33,153 @@ $profile = Profile::find()->where(['id'=>Yii::$app->user->id])->one();
 ?>
 
 <div class="wrap">
-
-    <nav class="navbar navbar-color navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed visible-xs" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="glyphicon glyphicon-user"></span> 
-                </button>
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
-                    <span class="glyphicon glyphicon-menu-hamburger"></span>
-                </button>
-                <a class="navbar-brand" href="#">Brand Logo !!!</a>
-            </div>
-
-            <div class="collapse" id="bs-example-navbar-collapse-1">
-
-                        <ul class="nav navbar-nav visible-xs"  style="background-color: whitesmoke">
-                            <li class="dropdown dropdown-large">
-                                <div class="navbar-login">
-                                    <div class="row">
-                                        <div class="col-xs-4">
-                                            <p class="text-center">
-                                                <span class="glyphicon glyphicon-user icon-size"></span>
-                                            </p>
-                                        </div>
-                                        <div class="col-xs-8">
-                                            <p class="text-left"><strong><?= $profile->name?></strong>Galifa</p>
-                                            <p class="text-left small">Место для текста?!</p>
-                                            <p class="text-left">
-                                                <a href="#" class="btn btn-primary btn-block btn-sm">Мой Профиль</a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <div class="navbar-login navbar-login-session">
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <p>
-                                                <a href="#" class="btn btn-danger btn-block">Выйти</a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-
-                <ul class="nav navbar-nav navbar-right">
-
-                    <li>
-                        <a href="/">Стать исполнителем</a>
-                    </li>
-
-                   
-
-
-                        <?php if(Yii::$app->user->id):?>
-                             <li class="dropdown hidden-xs">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <span class="glyphicon glyphicon-user"></span> 
-                            <strong><?= $profile->name?></strong>
-                            <span class="glyphicon glyphicon-chevron-down"></span>
-                        </a>
-                             <ul class="dropdown-menu">
-                            <li>
-                                <div class="navbar-login">
-                                    <div class="row">
-                                        <div class="col-lg-4">
-                                            <p class="text-center">
-                                                <span class="glyphicon glyphicon-user icon-size"></span>
-                                            </p>
-                                        </div>
-                                        <div class="col-lg-8">
-                                            <p class="text-left"><strong><?= $profile->name?></strong></p>
-                                            <p class="text-left small">Место для текста?!</p>
-                                            <p class="text-left">
-                                                <a href="" class="btn btn-primary btn-block btn-sm">Мой Профиль</a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <div class="navbar-login navbar-login-session">
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <p>
-                                                <a href="<?=Url::to(['/site/logout'])?>" class="btn btn-danger btn-block">Выйти</a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <?php else:?>
-                        <li class="dropdown hidden-xs">
-                        <a href="#" class="dropdown-toggle" id="login" data-toggle="dropdown">
-                            <span class="glyphicon glyphicon-user"></span> 
-                            <span class="glyphicon glyphicon-chevron-down"></span>
-                        </a>
-                        <div class="dropdown-menu" id="login-load" style="padding: 20px; width: 300px;">
-                        </div>
-                        </li>
-                       <?php endif;?>
-
-                    </li>
-                </ul>
-
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown dropdown-large">
-                        <a id="category" href="" class="dropdown-toggle" data-toggle="dropdown">Создать задание<b class="caret"></b></a>
-
-                        <ul id="category-load" class="dropdown-menu dropdown-menu-large row">
-                           
-                        </ul>
-
-                    </li>
-                </ul>
-
-                <!-- Search Form -->
-                <form role="form">
-
-                    <!-- Search Field -->
-                    <div class="row">
-                        <div class="form-group">
-                            <div class="input-group">
-                                <input class="form-control" type="text" name="search" placeholder="Search" required/>
-                                <span class="input-group-btn">
-                                    <button class="btn btn-success" type="submit">
-                                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                                        <span style="margin-left:10px;">Search</span>
-                                    </button>
-                                </span>
+    <div class="mainbody container-fluid">
+        <div class="row">
+            <div class="navbar-wrapper">
+                <div class="container-fluid">
+                    <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span
+                                            class="icon-bar"></span><span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand" href="./ORqmj" style="margin-right:-8px; margin-top:-5px;">
+                                    <img alt="Brand" src="https://lut.im/7trApsDX08/GeilMRp1FIm4f2p7.png" width="30px" height="30px">
+                                </a>
+                                <a class="navbar-brand" href="./ORqmj">Project*</a>
+                                <i class="brand_network"><small><small>diaspora* Network</small></small></i>
+                            </div>
+                            <div class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="./ORqmj">Stream</a></li>
+                                    <li><a href="#">My Activity</a></li>
+                                    <li><span class="badge badge-important">2</span><a href="#"><i class="fa fa-bell-o fa-lg" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i></a></li>
+                                </ul>
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <span class="user-avatar pull-left" style="margin-right:8px; margin-top:-5px;">
+                                            <img src="https://lut.im/7JCpw12uUT/mY0Mb78SvSIcjvkf.png" class="img-responsive img-circle" title="John Doe" alt="John Doe" width="30px" height="30px">
+                                        </span>
+                                            <span class="user-name">
+                                            John Doe
+                                        </span>
+                                            <b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <div class="navbar-content">
+                                                    <div class="row">
+                                                        <div class="col-md-5">
+                                                            <img src="https://lut.im/7JCpw12uUT/mY0Mb78SvSIcjvkf.png" alt="Alternate Text" class="img-responsive" width="120px" height="120px" />
+                                                            <p class="text-center small">
+                                                                <a href="./3X6zm">Change Photo</a></p>
+                                                        </div>
+                                                        <div class="col-md-7">
+                                                            <span>John Doe</span>
+                                                            <p class="text-muted small">
+                                                                example@pods.tld</p>
+                                                            <div class="divider">
+                                                            </div>
+                                                            <a href="./56ExR" class="btn btn-default btn-xs"><i class="fa fa-user-o" aria-hidden="true"></i> Profile</a>
+                                                            <a href="#" class="btn btn-default btn-xs"><i class="fa fa-address-card-o" aria-hidden="true"></i> Contacts</a>
+                                                            <a href="#" class="btn btn-default btn-xs"><i class="fa fa-cogs" aria-hidden="true"></i> Settings</a>
+                                                            <a href="#" class="btn btn-default btn-xs"><i class="fa fa-question-circle-o" aria-hidden="true"></i> Help!</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="navbar-footer">
+                                                    <div class="navbar-footer-content">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <a href="#" class="btn btn-default btn-sm"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Change Passowrd</a>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <a href="#" class="btn btn-default btn-sm pull-right"><i class="fa fa-power-off" aria-hidden="true"></i> Sign Out</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-
-                </form>
-                <!-- End of Search Form -->
-
-
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
-
-
-
-    <div class="container container-main bg">
-        <?=$content?>
+                </div>
+            </div>
+        </div>
+        <div class="container container-main bg">
+            <?=$content?>
+        </div>
     </div>
 </div>
 
-<footer class="footer">
-    <div class="footer-bot">
-        <div class="container" style="padding: 50px">
-            <div class="col-sm-4">
+<!--<link href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet">-->
+<!--footer start from here-->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6 footer-col">
+                <div class="logofooter"> Logo</div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+                <p><i class="fa fa-map-pin"></i> #228, Tiruvannamalai, Tamilnadu, India</p>
+                <p><i class="fa fa-phone"></i> Phone (India) : +91 9999 999 999</p>
+                <p><i class="fa fa-envelope"></i> E-mail : info@prabuuideveloper.com</p>
 
-                <a href="/" style="font-size: 40px; color: white">Logo</a>
-
-                <ul class="social">
-                    <li>
-                        <a href="/"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                        <a href="/"><i class="fa fa-vk" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                        <a href="/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                        <a href="/"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-                    </li>
-                </ul>
-                <ul class="footer-info" style="list-style-type: none;">
-                    <li>
-                        <p><i class="fa fa-phone" aria-hidden="true"></i> Контакты службы поддержки</p>
-                    </li>
-                    <li>
-                        <p class="text-center">   0-800-301-141<br>
-                            Звонки на территории Украины бесплатные</p>
-                    </li>
-                    <li>
-                        <p><i class="fa fa-envelope-o" aria-hidden="true"></i> support@kabanchik.ua</p>
-                    </li>
+            </div>
+            <div class="col-md-3 col-sm-6 footer-col">
+                <h6 class="heading7">GENERAL LINKS</h6>
+                <ul class="footer-ul">
+                    <li><a href="#"> Career</a></li>
+                    <li><a href="#"> Privacy Policy</a></li>
+                    <li><a href="#"> Terms & Conditions</a></li>
+                    <li><a href="#"> Client Gateway</a></li>
+                    <li><a href="#"> Ranking</a></li>
+                    <li><a href="#"> Case Studies</a></li>
+                    <li><a href="#"> Frequently Ask Questions</a></li>
                 </ul>
             </div>
-            <div class="col-sm-2">
-                <h5 class="text-center">О нас</h5>
-                <ul class="footer-info">
-                    <li>
-                        <a href="/">О проекте</a>
-                    </li>
-                    <li>
-                        <a href="/">Контакты</a>
-                    </li>
-                </ul>
+            <div class="col-md-3 col-sm-6 footer-col">
+                <h6 class="heading7">LATEST POST</h6>
+                <div class="post">
+                    <p>facebook crack the movie advertisment code:what it means for you <span>August 3,2015</span></p>
+                    <p>facebook crack the movie advertisment code:what it means for you <span>August 3,2015</span></p>
+                    <p>facebook crack the movie advertisment code:what it means for you <span>August 3,2015</span></p>
+                </div>
             </div>
-            <div class="col-sm-3">
-                <h5 class="text-center">Как это работает</h5>
-                <ul class="footer-info">
-                    <li>
-                        <a href="/">Как заказать услугу</a>
-                    </li>
-                    <li>
-                        <a href="/">Как зарегистрировать компанию</a>
-                    </li>
-                    <li>
-                        <a href="/">Гарантия и безопасность</a>
-                    </li>
-                    <li>
-                        <a href="/">Интересные задания</a>
-                    </li>
-                    <li>
-                        <a href="/">Последние отзывы</a>
-                    </li>
-                    <li>
-                        <a href="/">Топ исполнителей</a>
-                    </li>
-                    <li>
-                        <a href="/">Все категории услуг</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-sm-3">
-                <h5 class="text-center">Помощь</h5>
-                <ul class="footer-info">
-                    <li>
-                        <a href="/">Вопросы и ответы</a>
-                    </li>
-                    <li>
-                        <a href="/">Публичная оферта</a>
-                    </li>
-                    <li>
-                        <a href="/">Правила конфиденциальности</a>
-                    </li>
-                    <li>
-                        <a href="/">Написать разработчикам</a>
-                    </li>
-                    <li>
-                        <a href="/">Cлужба поддержки</a>
-                    </li>
+            <div class="col-md-3 col-sm-6 footer-col">
+                <h6 class="heading7">Social Media</h6>
+                <ul class="footer-social">
+                    <li><i class="fa fa-linkedin social-icon linked-in" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-facebook social-icon facebook" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-twitter social-icon twitter" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-google-plus social-icon google" aria-hidden="true"></i></li>
                 </ul>
             </div>
         </div>
     </div>
 </footer>
+<!--footer start from here-->
+
+<div class="copyright">
+    <div class="container">
+        <div class="col-md-6">
+            <p>© 2016 - All Rights with prabuuideveloper</p>
+        </div>
+        <div class="col-md-6">
+            <ul class="bottom_ul">
+                <li><a href="#">prabuuideveloper.com</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Faq's</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Site Map</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
 
 <?php $this->endBody() ?>
 </body>

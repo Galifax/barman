@@ -14,6 +14,7 @@ class m170817_112350_profile extends Migration
                 'patronymic' => $this->string(255),
                 'born' => $this->date()->notNull(),
                 'category' => $this->string(255),
+                'gender' => $this->integer(11),
                 'status' => $this->integer(11),
                 'about_me' => $this->string(1000),
                 'from' => $this->string(255),

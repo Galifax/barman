@@ -38,7 +38,7 @@ class Profile extends \yii\db\ActiveRecord
     {
         return [
             [['id', 'born'], 'required'],
-            [['id', 'status'], 'integer'],
+            [['id', 'status', 'gender'], 'integer'],
             [['born'], 'safe'],
             [['avatar', 'name', 'surname', 'patronymic', 'category', 'from', 'contacts'], 'string', 'max' => 255],
             [['about_me'], 'string', 'max' => 1000],
@@ -59,6 +59,7 @@ class Profile extends \yii\db\ActiveRecord
             'patronymic' => 'Patronymic',
             'born' => 'Born',
             'category' => 'Category',
+            'gender' => 'Gender',
             'status' => 'Status',
             'about_me' => 'About Me',
             'from' => 'From',
@@ -77,5 +78,6 @@ class Profile extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Selection::className(), ['id' => 'id']);
     }
+    
 
 }

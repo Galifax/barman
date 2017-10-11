@@ -25,29 +25,15 @@ class ProfileController extends Controller
     /**
      * @inheritdoc
      */
-    public function behaviors()
-    {
+    public function behaviors() {
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout', 'signup'],
                 'rules' => [
                     [
-                        'actions' => ['signup'],
-                        'allow' => true,
-                        'roles' => ['?'],
-                    ],
-                    [
-                        'actions' => ['logout'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
-                ],
-            ],
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'logout' => ['post'],
                 ],
             ],
         ];
@@ -78,7 +64,7 @@ class ProfileController extends Controller
     {
 
     $model = Profile::find()->where(['id'=> Yii::$app->user->id])->with('user.selection')->one();
-
+    print_r($model);
 
         return $this->render('index', compact('model'));
     }

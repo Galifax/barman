@@ -49,11 +49,4 @@ use yii\widgets\ActiveForm;
 <?php ActiveForm::end();
 
 ?>
-        </div>
-        <hr>
-        <div class="panel-body">
-            <a href="<?=Url::to(['/profile'])?>" class="btn btn-default"><i class="fa fa-fw fa-times" aria-hidden="true"></i> Cancel</a>
-            <button class="btn btn-primary"><i class="fa fa-fw fa-check" aria-hidden="true"></i> Update Profile</button>
-        </div>
-    </div>
 <?php Pjax::end();?>

@@ -10,6 +10,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use frontend\models\Profile;
+use frontend\models\User;
 use common\widgets\Alert;
 
 AppAsset::register($this);
@@ -53,17 +54,17 @@ $profile = Profile::find()->where(['id'=>Yii::$app->user->id])->one();
                             <div class="navbar-collapse collapse">
                                 <ul class="nav navbar-nav">
                                     <li><a href="./ORqmj">Stream</a></li>
-                                    <li><a href="#">My Activity</a></li>
                                     <li><span class="badge badge-important">2</span><a href="#"><i class="fa fa-bell-o fa-lg" aria-hidden="true"></i></a></li>
                                     <li><a href="#"><i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i></a></li>
                                 </ul>
                                 <ul class="nav navbar-nav navbar-right">
                                     <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                         <span class="user-avatar pull-left" style="margin-right:8px; margin-top:-5px;">
-                                            <img src="https://lut.im/7JCpw12uUT/mY0Mb78SvSIcjvkf.png" class="img-responsive img-circle" title="John Doe" alt="John Doe" width="30px" height="30px">
+                                            <img src="<?=empty($profile->avatar)? 'http://www.nykhas.ru/wp-content/uploads/2017/02/mister-x-jpg.jpg' : $profile->avatar?>" class="img-responsive img-circle" title="John Doe" alt="John Doe" width="30px" height="30px">
                                         </span>
+                                        <?php if(Yii::$app->user->id):?>
                                             <span class="user-name">
-                                            John Doe
+                                            <?= $profile->name?> <?= $profile->surname?>
                                         </span>
                                             <b class="caret"></b></a>
                                         <ul class="dropdown-menu">
@@ -71,20 +72,16 @@ $profile = Profile::find()->where(['id'=>Yii::$app->user->id])->one();
                                                 <div class="navbar-content">
                                                     <div class="row">
                                                         <div class="col-md-5">
-                                                            <img src="https://lut.im/7JCpw12uUT/mY0Mb78SvSIcjvkf.png" alt="Alternate Text" class="img-responsive" width="120px" height="120px" />
-                                                            <p class="text-center small">
-                                                                <a href="./3X6zm">Change Photo</a></p>
+                                                            <img src="<?=empty($profile->avatar)? 'http://www.nykhas.ru/wp-content/uploads/2017/02/mister-x-jpg.jpg' : $profile->avatar?>" class="img-responsive" width="120px" height="120px" />
+                                                            
                                                         </div>
                                                         <div class="col-md-7">
-                                                            <span>John Doe</span>
+                                                            <span><?= $profile->name?> <?= $profile->surname?></span>
                                                             <p class="text-muted small">
-                                                                example@pods.tld</p>
+                                                                <?= $profile->user->email?></p>
                                                             <div class="divider">
                                                             </div>
                                                             <a href="<?=Url::to(['/profile'])?>" class="btn btn-default btn-xs"><i class="fa fa-user-o" aria-hidden="true"></i> Profile</a>
-                                                            <a href="#" class="btn btn-default btn-xs"><i class="fa fa-address-card-o" aria-hidden="true"></i> Contacts</a>
-                                                            <a href="#" class="btn btn-default btn-xs"><i class="fa fa-cogs" aria-hidden="true"></i> Settings</a>
-                                                            <a href="#" class="btn btn-default btn-xs"><i class="fa fa-question-circle-o" aria-hidden="true"></i> Help!</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -92,10 +89,11 @@ $profile = Profile::find()->where(['id'=>Yii::$app->user->id])->one();
                                                     <div class="navbar-footer-content">
                                                         <div class="row">
                                                             <div class="col-md-6">
-                                                                <a href="#" class="btn btn-default btn-sm"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Change Passowrd</a>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <a href="#" class="btn btn-default btn-sm pull-right"><i class="fa fa-power-off" aria-hidden="true"></i> Sign Out</a>
+                                                                <a href="<?=Url::to(['/site/logout'])?>"><i class="fa fa-power-off" class="btn btn-default btn-sm pull-right" aria-hidden="true"></i> Выйти</a>
+                                            <?php else:?>
+                                                                <a href="<?=Url::to(['/site/login'])?>" value="/site/login" class="btn btn-default btn-sm pull-right"><i class="fa fa-power-off" aria-hidden="true"></i> Войти</a>
+                                                                <a href="<?=Url::to(['/site/signup'])?>" value="/site/signup" class="btn btn-default btn-sm pull-right"><i class="fa fa-upload" aria-hidden="true"></i>Регистрация</a>
+                                            <?php endif;?>
                                                             </div>
                                                         </div>
                                                     </div>

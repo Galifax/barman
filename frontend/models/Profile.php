@@ -34,12 +34,14 @@ class Profile extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+    public $file;
     public function rules()
     {
         return [
             [['id', 'born'], 'required'],
             [['id', 'status', 'gender'], 'integer'],
             [['born'], 'safe'],
+            [['file'], 'file'],
             [['avatar', 'name', 'surname', 'patronymic', 'category', 'from', 'contacts'], 'string', 'max' => 255],
             [['about_me'], 'string', 'max' => 1000],
             [['id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['id' => 'id']],
